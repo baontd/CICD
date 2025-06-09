@@ -3,8 +3,7 @@ const http = require("http");
 let totalCalls = 0;
 let history = [];
 
-http
-  .createServer((req, res) => {
+http.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "application/json" });
 
     const url = req.url;
@@ -67,6 +66,6 @@ http
       res.end(JSON.stringify({ error: "Endpoint not found" }));
     }
   })
-  .listen(80, '0.0.0.0', () => {
-    console.log("Server is running on port 80");
+  .listen(3000, "0.0.0.0", () => {
+    console.log("Server is running on port 3000");
   });
